@@ -589,3 +589,104 @@ body{
     }
 
 }
+/* ==========================
+Ending
+========================== */
+
+.ending-page{
+
+    background:#050505;
+
+    color:white;
+
+    overflow:hidden;
+
+}
+
+.ending{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    width:90%;
+
+}
+
+.ending h1{
+
+    font-size:60px;
+
+    font-family:"Playfair Display", serif;
+
+    opacity:0;
+
+}
+
+.ending h2{
+
+    margin-top:35px;
+
+    opacity:0;
+
+    font-size:36px;
+
+}
+
+.ending p{
+
+    margin-top:55px;
+
+    line-height:2.2;
+
+    font-size:24px;
+
+    opacity:0;
+
+}
+
+.ending span{
+
+    display:block;
+
+    margin-top:80px;
+
+    color:#F8A5C2;
+
+    opacity:0;
+
+}
+
+.show{
+
+    animation:fadeIn 1.5s forwards;
+
+}
+
+@media(max-width:768px){
+
+    .ending h1{
+
+        font-size:42px;
+
+    }
+
+    .ending h2{
+
+        font-size:28px;
+
+    }
+
+    .ending p{
+
+        font-size:19px;
+
+    }
+
+}
