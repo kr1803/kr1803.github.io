@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Letter</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 
@@ -18,39 +16,58 @@
 
 <body>
 
-<div class="page">
+<div class="progress">3 / 4</div>
 
-    <div class="progress">
-        3 / 4
-    </div>
+<div class="envelope-area">
 
-    <h1>💌</h1>
+    <div id="envelope" class="envelope">
 
-    <h2>너에게</h2>
+        <div class="lid"></div>
 
-    <div class="letter">
+        <div class="body"></div>
 
-        여기에 편지를 적으면 됩니다.
-
-        <br><br>
-
-        줄바꿈도 자유롭게 할 수 있어요.
-
-        <br><br>
-
-        마지막에는
-
-        사랑해 ❤️
+        <div class="seal">❤</div>
 
     </div>
 
-    <button id="nextBtn">
-        마지막 페이지 →
-    </button>
+    <p class="guide">
+        봉투를 눌러 편지를 열어봐
+    </p>
+
+</div>
+
+<div id="letter" class="letter">
+
+<h2>To. ❤️</h2>
+
+<div class="content">
+
+안녕.
+
+<br><br>
+
+벌써 우리가 함께한 지 300일이 되었네.
+
+<br><br>
+
+여기에 편지를 쓰면 돼.
+
+<br><br>
+
+사랑해 ❤️
+
+</div>
+
+<button id="nextBtn">
+
+마지막 페이지 →
+
+</button>
 
 </div>
 
 <script src="page3.js"></script>
 
 </body>
+
 </html>
