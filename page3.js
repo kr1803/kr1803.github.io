@@ -1,11 +1,24 @@
-document.getElementById("nextBtn").onclick = () => {
+const envelope = document.getElementById("envelope");
+const letter = document.getElementById("letter");
 
-    document.body.classList.add("fadeout");
+envelope.onclick = () => {
 
-    setTimeout(() => {
+    envelope.classList.add("open");
 
-        location.href = "page4.html";
+    setTimeout(()=>{
 
-    },700);
+        letter.classList.add("show");
+
+        letter.scrollIntoView({
+            behavior:"smooth"
+        });
+
+    },500);
+
+};
+
+document.getElementById("nextBtn").onclick=()=>{
+
+    location.href="page4.html";
 
 };
