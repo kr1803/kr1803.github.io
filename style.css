@@ -274,3 +274,157 @@ body{
     }
 
 }
+/* ===============================
+   Episode 2
+================================ */
+
+.page2{
+
+    background:#050505;
+    overflow:hidden;
+
+}
+
+.page2-container{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    width:90%;
+
+    z-index:10;
+
+}
+
+.small-title{
+
+    letter-spacing:8px;
+
+    color:#F8A5C2;
+
+    margin-bottom:30px;
+
+    font-size:18px;
+
+}
+
+#counter{
+
+    font-size:120px;
+
+    font-family:"Playfair Display", serif;
+
+    margin-bottom:20px;
+
+}
+
+.message{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:.8s;
+
+    font-size:26px;
+
+    color:white;
+
+}
+
+.message.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+#nextButton{
+
+    margin-top:60px;
+
+    padding:16px 40px;
+
+    background:white;
+
+    color:black;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    transition:.8s;
+
+}
+
+#nextButton.show{
+
+    opacity:1;
+
+}
+
+#nextButton:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* Particle */
+
+.particles{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    width:4px;
+
+    height:4px;
+
+    background:white;
+
+    border-radius:50%;
+
+    opacity:.25;
+
+    animation:particleFloat linear infinite;
+
+}
+
+@keyframes particleFloat{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-120vh);
+
+    }
+
+}
