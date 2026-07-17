@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Letter</title>
+    <title>Letter</title>
 
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 
-<link rel="stylesheet" href="page3.css">
+    <link rel="stylesheet" href="page3.css">
 
 </head>
 
 <body>
 
-<div class="progress">3 / 4</div>
+<div class="progress">
+    3 / 4
+</div>
 
-<div class="envelope-area">
+<div class="container">
 
+    <!-- 봉투 -->
     <div id="envelope" class="envelope">
 
-        <div class="lid"></div>
+        <div class="envelope-back"></div>
 
-        <div class="body"></div>
+        <div class="letter-preview">
+            <div class="preview-line"></div>
+            <div class="preview-line short"></div>
+            <div class="preview-line"></div>
+        </div>
 
-        <div class="seal">❤</div>
+        <div class="envelope-front"></div>
+
+        <div class="envelope-flap"></div>
+
+        <div class="seal">
+            ❤
+        </div>
 
     </div>
 
@@ -36,13 +48,15 @@
 
 </div>
 
-<div id="letter" class="letter">
+<!-- 편지 -->
 
-<h2>To. ❤️</h2>
+<div id="paper" class="paper">
 
-<div class="content">
+    <h2>To. ❤️</h2>
 
-안녕.
+    <div id="letterText" class="letter-text">
+
+여기에 편지를 쓰면 됩니다.
 
 <br><br>
 
@@ -50,19 +64,21 @@
 
 <br><br>
 
-여기에 편지를 쓰면 돼.
+정말 행복했고,
+
+앞으로도 행복했으면 좋겠어.
 
 <br><br>
 
 사랑해 ❤️
 
-</div>
+    </div>
 
-<button id="nextBtn">
+    <button id="nextBtn">
 
-마지막 페이지 →
+        마지막 페이지 →
 
-</button>
+    </button>
 
 </div>
 
