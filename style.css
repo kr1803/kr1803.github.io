@@ -428,35 +428,37 @@ body{
     }
 
 }
-/* =========================
-   Letter Page
-========================= */
+/* ==========================
+LETTER PAGE
+========================== */
 
 .letter-page{
 
     background:#050505;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    min-height:100vh;
+    font-family:'Pretendard',sans-serif;
 
     color:white;
 
+    min-height:100vh;
+
+    overflow-y:auto;
+
+    padding:40px 0;
+
 }
 
-.letter-container{
+#intro{
 
     text-align:center;
 
-    width:90%;
+    margin-top:150px;
+
+    transition:.5s;
 
 }
 
-.envelope{
+#envelope{
 
     font-size:90px;
 
@@ -466,87 +468,95 @@ body{
 
 }
 
-.envelope:hover{
+#envelope:hover{
 
-    transform:scale(1.08);
-
-}
-
-#openText{
-
-    margin-top:20px;
-
-    color:#dddddd;
+    transform:scale(1.1);
 
 }
 
-.paper{
+#intro p{
+
+    margin-top:25px;
+
+    color:#ddd;
+
+}
+
+#paper{
 
     display:none;
+
+    width:min(90%,700px);
+
+    margin:40px auto;
 
     background:#fffdf8;
 
     color:#333;
 
-    max-width:700px;
-
-    margin:auto;
+    border-radius:20px;
 
     padding:45px;
 
-    border-radius:20px;
-
-    text-align:left;
-
-    box-shadow:0 10px 40px rgba(0,0,0,.3);
+    box-shadow:0 10px 40px rgba(0,0,0,.35);
 
 }
 
-.paper.show{
+#paper.show{
 
     display:block;
 
-    animation:fadeIn .8s;
+    animation:slide .7s ease;
 
 }
 
-.paper h2{
+@keyframes slide{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+#paper h2{
 
     text-align:center;
 
-    margin-bottom:30px;
+    margin-bottom:35px;
 
-    font-family:'Nanum Myeongjo', serif;
+    font-family:'Nanum Myeongjo',serif;
 
 }
 
-#letterText{
+.letter{
 
-    white-space:pre-line;
-
-    line-height:2;
+    line-height:2.2;
 
     font-size:20px;
 
-    opacity:0;
+    white-space:normal;
 
 }
 
-#letterText.show{
+#nextPage{
 
-    opacity:1;
+    display:block;
 
-    animation:fadeIn 1s forwards;
+    margin:60px auto 10px;
 
-}
-
-#nextButton{
-
-    display:none;
-
-    margin:45px auto 0;
-
-    padding:14px 36px;
+    padding:15px 40px;
 
     border:none;
 
@@ -556,35 +566,33 @@ body{
 
     color:white;
 
-    cursor:pointer;
-
     font-size:17px;
 
-}
+    cursor:pointer;
 
-#nextButton.show{
-
-    display:block;
-
-    animation:fadeIn .8s;
+    transition:.3s;
 
 }
 
-@keyframes fadeIn{
+#nextPage:hover{
 
-    from{
+    transform:scale(1.05);
 
-        opacity:0;
+}
 
-        transform:translateY(10px);
+@media(max-width:768px){
+
+    #paper{
+
+        padding:30px;
 
     }
 
-    to{
+    .letter{
 
-        opacity:1;
+        font-size:18px;
 
-        transform:translateY(0);
+        line-height:2;
 
     }
 
