@@ -1,24 +1,46 @@
 const envelope = document.getElementById("envelope");
-const letter = document.getElementById("letter");
+const paper = document.getElementById("paper");
+const nextBtn = document.getElementById("nextBtn");
 
-envelope.onclick = () => {
+let opened = false;
 
+envelope.addEventListener("click", () => {
+
+    if(opened) return;
+
+    opened = true;
+
+    // 봉투 열기
     envelope.classList.add("open");
 
-    setTimeout(()=>{
+    // 봉투가 열린 뒤 편지 등장
+    setTimeout(() => {
 
-        letter.classList.add("show");
+        paper.classList.add("show");
 
-        letter.scrollIntoView({
-            behavior:"smooth"
-        });
+    }, 900);
 
-    },500);
+    // 봉투는 천천히 사라짐
+    setTimeout(() => {
 
-};
+        envelope.classList.add("hide");
 
-document.getElementById("nextBtn").onclick=()=>{
+        document.querySelector(".guide").style.opacity = "0";
 
-    location.href="page4.html";
+    }, 1300);
 
-};
+});
+
+nextBtn.addEventListener("click", () => {
+
+    document.body.style.opacity = "0";
+
+    document.body.style.transition = ".8s";
+
+    setTimeout(() => {
+
+        location.href = "page4.html";
+
+    },800);
+
+});
